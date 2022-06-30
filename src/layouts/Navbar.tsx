@@ -28,9 +28,15 @@ export const Navbar = () => {
             id="example-navbar-danger"
           >
             <ul className="flex flex-col lg:flex-row list-none mr-auto text-right">
-              <NavbarListItem route="/" name={t('menu:home')} />
-              <NavbarListItem route="stack" name={t('menu:stack')} />
-              <NavbarListItem route="projects" name={t('menu:projects')} />
+              <div onClick={() => setNavbarOpen(false)}>
+                <NavbarListItem route="/" name={t('menu:home')} />
+              </div>
+              <div onClick={() => setNavbarOpen(false)}>
+                <NavbarListItem route="/stack" name={t('menu:stack')} />
+              </div>
+              <div onClick={() => setNavbarOpen(false)}>
+                <NavbarListItem route="/projects" name={t('menu:projects')} />
+              </div>
               <li className="nav-item block md:hidden text-left">
                 <SelectLanguage />
               </li>

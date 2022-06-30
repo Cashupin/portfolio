@@ -9,10 +9,10 @@ import { ProjectScreen } from '../components/projects/ProjectScreen'
 
 export const AppRouter = () => {
   return (
-    <Router>
-      <HomeScreen path="/" />
-      <StackScreen path="stack" />
-      <ProjectScreen path="projects" />
-    </Router>
+      <Router>
+        <HomeScreen path="/" />
+        <StackScreen path="/stack" />
+        <ProjectScreen path="/projects" />
+      </Router>
   )
 }
