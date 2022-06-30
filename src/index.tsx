@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { Portfolio } from './PortfolioApp'
 import './styles/styles.scss'
+import './i18n'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(<Portfolio />)

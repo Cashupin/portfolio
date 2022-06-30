@@ -1,0 +1,10 @@
+{
+  "common": {
+    "dev": "Developer"
+  },
+  "menu": {
+    "home": "Home",
+    "stack": "Stack",
+    "projects": "Projects"
+  }
+}

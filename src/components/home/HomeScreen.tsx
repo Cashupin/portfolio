@@ -1,14 +1,18 @@
-import { RouteComponentProps } from '@gatsbyjs/reach-router'
+import { RouteComponentProps, useLocation } from '@gatsbyjs/reach-router'
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 export const HomeScreen: React.FC<RouteComponentProps> = () => {
+  const { t } = useTranslation()
+  const location = useLocation()
+  console.log(location.pathname)
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 text-center w-full h-full content-center bg-gray-800">
       <div className="w-full grid grid-rows-3 p-20 text-white">
         <div className="text-[4em] font-bold text-shadow-white leading-[0.90] ">
           Juan Alvarez Carrera
         </div>
-        <div className="">Developer</div>
+        <div className="">{t('dev')}</div>
         <div>
           <button className="border-solid border-2 border-white px-4 py-3 rounded-xl hover:bg-gray-700 active:bg-gray-600 m-3">
             Download Cv

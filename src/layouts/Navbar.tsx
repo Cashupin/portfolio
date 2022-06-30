@@ -1,11 +1,15 @@
-import { Link } from '@gatsbyjs/reach-router'
 import React, { useState } from 'react'
+import { useTranslation } from 'react-i18next'
+import { NavbarListItem } from './components/NavbarListItem'
+import { SelectLanguage } from './components/SelectLanguage'
 
 export const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
+  const { t } = useTranslation()
+
   return (
     <>
-      <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-gray-800 ">
+      <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 md:bg-gray-800 bg-gray-900 ">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <button
@@ -24,29 +28,11 @@ export const Navbar = () => {
             id="example-navbar-danger"
           >
             <ul className="flex flex-col lg:flex-row list-none mr-auto text-right">
-              <li className="nav-item">
-                <Link
-                  className="px-3 py-2 flex items-center text-xl uppercase font-bold leading-snug text-white hover:opacity-75"
-                  to="/"
-                >
-                  <span className="ml-2 text-shadow-white">Home</span>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  className="px-3 py-2 flex items-center text-xl uppercase font-bold leading-snug text-white hover:opacity-75"
-                  to="stack"
-                >
-                  <span className="ml-2 text-shadow-white">Stack</span>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  className="px-3 py-2 flex items-center text-xl uppercase font-bold leading-snug text-white hover:opacity-75"
-                  to="projects"
-                >
-                  <span className="ml-2 text-shadow-white">Projects</span>
-                </Link>
+              <NavbarListItem route="/" name={t('menu:home')} />
+              <NavbarListItem route="stack" name={t('menu:stack')} />
+              <NavbarListItem route="projects" name={t('menu:projects')} />
+              <li className="nav-item block md:hidden text-left">
+                <SelectLanguage />
               </li>
             </ul>
             <div className="relative w-full sm:w-7/12 md:w-5/12 px-4 flex-wrap items-stretch lg:ml-auto hidden md:flex">
@@ -91,7 +77,13 @@ export const Navbar = () => {
                     <i className="fab fa-github text-3xl leading-lg text-white opacity-75" />
                   </a>
                 </li>
+                {/* <li className="nav-item">
+                  <ChangeLanguage />
+                </li> */}
               </ul>
+            </div>
+            <div className="hidden md:block">
+              <SelectLanguage />
             </div>
           </div>
         </div>
