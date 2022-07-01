@@ -1,13 +1,13 @@
 import { Link } from '@gatsbyjs/reach-router'
-import React from 'react'
+import React, { ReactNode, FC } from 'react'
 
 interface Props {
-  children: React.ReactNode
+  children: ReactNode
   to: string
   className: string
 }
 
-const NavLink: React.FC<Props> = (props) => {
+const NavLink: FC<Props> = (props) => {
   return (
     <Link
       {...props}

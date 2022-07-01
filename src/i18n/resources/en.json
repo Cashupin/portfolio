@@ -1,10 +1,18 @@
 {
   "common": {
-    "dev": "Developer"
+    
+  },
+  "typed": {
+    "dev": "Developer",
+    "design": "Design"
   },
   "menu": {
     "home": "Home",
     "stack": "Stack",
     "projects": "Projects"
+  },
+  "homebuttons": {
+    "cv": "Download CV",
+    "contact": "Contact"
   }
 }

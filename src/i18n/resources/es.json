@@ -2,9 +2,17 @@
   "common": {
     "dev": "Desarrollador"
   },
+  "typed": {
+    "dev": "Desarrollador",
+    "design": "Diseñador"
+  },
   "menu": {
     "home": "Inicio",
     "stack": "Habilidades",
-    "projects": "Projectos"
+    "projects": "Proyectos"
+  },
+  "homebuttons": {
+    "cv": "Descargar CV",
+    "contact": "Contactar"
   }
 }
