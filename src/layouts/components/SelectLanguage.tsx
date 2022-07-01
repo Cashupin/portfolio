@@ -41,8 +41,8 @@ export const SelectLanguage = () => {
 
       <div
         id="dropdown"
-        className={`z-10 bg-white divide-y divide-gray-100 ${
-          toggle ? 'absolute' : 'hidden'
+        className={`z-50 bg-white divide-y divide-gray-100 ${
+          toggle ? 'fixed' : 'hidden'
         } rounded shadow  dark:bg-gray-700 w-40 mt-1`}
       >
         <ul
