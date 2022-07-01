@@ -23,10 +23,14 @@ export const HomeScreen: React.FC<RouteComponentProps> = () => {
     }
   }, [t])
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 text-center w-full h-full content-center bg-gray-800">
-      <div className="w-full grid grid-rows-3 p-20 text-white">
-        <div className="text-[4em] font-bold text-shadow-white leading-[0.90] ">
-          Juan Alvarez Carrera
+    <div className="grid grid-cols-1 lg:grid-cols-2 text-center w-full lg:mt-36 content-center bg-gray-800">
+      <div className="w-full grid lg:grid-rows-5 grid-rows-3 p-20 text-white">
+        <div>
+          <div className="text-[4em] font-bold text-shadow-white leading-[0.90] md:row-span-3 2xl:px-20">
+            <span className="inline-block align-baseline">
+              Juan Alvarez Carrera
+            </span>
+          </div>
         </div>
         <div className="text-[35px] text-shadow-white">
           <span ref={el}></span>
@@ -41,11 +45,12 @@ export const HomeScreen: React.FC<RouteComponentProps> = () => {
           </button>
         </div>
       </div>
-      <div className="w-full grid grid-rows-1 p-20">
+      <div className="w-full grid grid-rows-1 md:px-10 p-5">
         <div className="text-center">
           <img
-            src={process.env.PUBLIC_URL + 'svg/main-dev.svg'}
-            className="w-3/5"
+            // src={process.env.PUBLIC_URL + 'svg/main-dev.svg'}
+            src="https://media-exp1.licdn.com/dms/image/C4D03AQEmaZGO-1gC2w/profile-displayphoto-shrink_800_800/0/1596565006053?e=1661990400&v=beta&t=aW0q0ss3VCM-QwB-LDbcgoHi1Ylv2Qxg-7xtQ0hEVTA"
+            className="lg:w-3/5 w-full rounded-full"
           />
         </div>
       </div>

@@ -9,7 +9,7 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 md:bg-gray-800 bg-gray-900 ">
+      <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 lg:bg-gray-800 bg-gray-900 ">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <button
@@ -41,7 +41,7 @@ export const Navbar = () => {
                 <SelectLanguage />
               </li>
             </ul>
-            <div className="relative w-full sm:w-7/12 md:w-5/12 px-4 flex-wrap items-stretch lg:ml-auto hidden md:flex">
+            <div className="relative w-full sm:w-7/12 md:w-5/12 px-4 flex-wrap items-stretch lg:ml-auto hidden lg:flex">
               <ul className="flex flex-col lg:flex-row list-none ml-auto">
                 <li className="nav-item">
                   <a
