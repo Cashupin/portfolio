@@ -1,12 +1,15 @@
+
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { NavbarListItem } from './components/NavbarListItem'
-import { SelectLanguage } from './components/SelectLanguage'
+import {
+  SelectLanguage,
+  NavbarListItem,
+  NavbarListItemIcon
+} from './components'
 
 export const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
   const { t } = useTranslation()
-
   return (
     <>
       <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 lg:bg-gray-800 bg-gray-800 ">
@@ -28,7 +31,10 @@ export const Navbar = () => {
             id="example-navbar-danger"
           >
             <ul className="flex flex-col lg:flex-row list-none mr-auto text-right">
-              <div onClick={() => setNavbarOpen(false)} className="w-screen md:w-auto">
+              <div
+                onClick={() => setNavbarOpen(false)}
+                className="w-screen md:w-auto"
+              >
                 <NavbarListItem route="/" name={t('menu:home')} />
               </div>
               <div onClick={() => setNavbarOpen(false)}>
@@ -43,49 +49,18 @@ export const Navbar = () => {
             </ul>
             <div className="relative w-full sm:w-7/12 md:w-5/12 px-4 flex-wrap items-stretch lg:ml-auto hidden lg:flex">
               <ul className="flex flex-col lg:flex-row list-none ml-auto">
-                <li className="nav-item">
-                  <a
-                    className="px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug text-white hover:opacity-75 rounded-xl text-shadow-white"
-                    href="https://www.linkedin.com/in/jalvarezcarrera/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <i className="fab fa-linkedin text-3xl leading-lg text-white opacity-75" />
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a
-                    className="px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug text-white hover:opacity-75 text-shadow-white"
-                    href="https://twitter.com/jalvarezc96"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <i className="fab fa-twitter text-3xl leading-lg text-white opacity-75" />
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a
-                    className="px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug text-white hover:opacity-75 text-shadow-white"
-                    href="https://api.whatsapp.com/send?phone=56934305335&text=Hola%20Juan%2C%20te%20contacto%20a%20traves%20de%20tu%20portafolio."
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <i className="fab fa-whatsapp text-3xl leading-lg text-white opacity-75" />
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a
-                    className="px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug text-white hover:opacity-75 text-shadow-white"
-                    href="https://github.com/cashupin"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <i className="fab fa-github text-3xl leading-lg text-white opacity-75" />
-                  </a>
-                </li>
-                {/* <li className="nav-item">
-                  <ChangeLanguage />
-                </li> */}
+                <NavbarListItemIcon link="https://www.linkedin.com/in/jalvarezcarrera/">
+                  <i className="fab fa-linkedin text-3xl leading-lg text-white opacity-75" />
+                </NavbarListItemIcon>
+                <NavbarListItemIcon link="https://twitter.com/jalvarezc96">
+                  <i className="fab fa-twitter text-3xl leading-lg text-white opacity-75" />
+                </NavbarListItemIcon>
+                <NavbarListItemIcon link="https://api.whatsapp.com/send?phone=56934305335&text=Hola%20Juan%2C%20te%20contacto%20a%20traves%20de%20tu%20portafolio.">
+                  <i className="fab fa-whatsapp text-3xl leading-lg text-white opacity-75" />
+                </NavbarListItemIcon>
+                <NavbarListItemIcon link="https://github.com/cashupin">
+                  <i className="fab fa-github text-3xl leading-lg text-white opacity-75" />
+                </NavbarListItemIcon>
               </ul>
             </div>
             <div className="hidden md:block">
