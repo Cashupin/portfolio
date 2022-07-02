@@ -3,8 +3,16 @@
 }
 
 body {
-  --tw-bg-opacity: 1;
-  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+  background: rgb(31, 41, 55);
+}
+
+#root>div {
+  background: rgb(31, 41, 55);
+  background: linear-gradient(180deg, rgba(31, 41, 55, 1) 22%, rgba(63, 82, 110, 1) 100%);
+  background-repeat: no-repeat;
+  background-size: auto;
+  height: 100%;
+  width: 100%;
 }
 
 ::-webkit-scrollbar {

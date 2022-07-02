@@ -9,7 +9,7 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 lg:bg-gray-800 bg-gray-900 ">
+      <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 lg:bg-gray-800 bg-gray-800 ">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <button
@@ -28,7 +28,7 @@ export const Navbar = () => {
             id="example-navbar-danger"
           >
             <ul className="flex flex-col lg:flex-row list-none mr-auto text-right">
-              <div onClick={() => setNavbarOpen(false)}>
+              <div onClick={() => setNavbarOpen(false)} className="w-screen md:w-auto">
                 <NavbarListItem route="/" name={t('menu:home')} />
               </div>
               <div onClick={() => setNavbarOpen(false)}>
@@ -37,7 +37,7 @@ export const Navbar = () => {
               <div onClick={() => setNavbarOpen(false)}>
                 <NavbarListItem route="/projects" name={t('menu:projects')} />
               </div>
-              <li className="nav-item block md:hidden text-left">
+              <li className="nav-item block md:hidden text-left w-11/12 md:w-auto">
                 <SelectLanguage />
               </li>
             </ul>

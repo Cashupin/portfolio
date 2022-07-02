@@ -11,11 +11,11 @@ export const SelectLanguage = () => {
     i18n.changeLanguage(value)
   }
   return (
-    <div className="border-2 shadow shadow-white/30  rounded-xl opacity-75">
+    <div className="border-2 shadow shadow-white/30  rounded-xl opacity-75 lg:mt-0 mt-5 w-full">
       <button
         id="selectLanguage"
         data-dropdown-toggle="dropdown"
-        className="text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center "
+        className="text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center w-full"
         type="button"
         onClick={() => {
           setToggle(!toggle)
@@ -43,10 +43,10 @@ export const SelectLanguage = () => {
         id="dropdown"
         className={`z-50 bg-white divide-y divide-gray-100 ${
           toggle ? 'fixed' : 'hidden'
-        } rounded shadow  dark:bg-gray-700 w-40 mt-1`}
+        } rounded shadow  dark:bg-gray-700 lg:w-40 mt-1 w-[87%] `}
       >
         <ul
-          className="py-1 text-sm text-white w-full"
+          className="py-1 text-sm text-white "
           aria-labelledby="selectLanguage"
         >
           {availableLanguages.map((language) => {

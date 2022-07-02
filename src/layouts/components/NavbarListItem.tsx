@@ -9,7 +9,7 @@ interface Props {
 
 export const NavbarListItem: React.FC<Props> = ({ route, name }) => {
   return (
-    <li className="nav-item border-b-2 border-white md:border-none">
+    <li className="nav-item border-b-2 border-white md:border-none w-11/12 md:w-auto">
       <Link
         to={route}
         className="px-3 py-2 flex items-center text-xl uppercase font-bold leading-snug text-white hover:opacity-75 border-white"
