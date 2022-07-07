@@ -14,7 +14,7 @@ export const NavbarListItem: React.FC<Props> = ({ route, name }) => {
         to={route}
         className="px-3 py-2 flex items-center text-xl uppercase font-bold leading-snug text-white hover:opacity-75 border-white"
       >
-        <span className="ml-2 text-shadow-white">{name}</span>
+        <span className="ml-2 ">{name}</span>
       </Link>
     </li>
   )

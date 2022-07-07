@@ -38,13 +38,13 @@ export const HomeScreen: React.FC<RouteComponentProps> = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 text-center w-full lg:mt-36 content-center">
         <div className="w-full grid grid-rows-3 p-20 text-white">
           <div>
-            <div className="text-[4em] font-bold text-shadow-white leading-[0.90]">
+            <div className="text-[4em] font-bold leading-[0.90]">
               <span className="inline-block align-baseline">
                 Juan Alvarez Carrera
               </span>
             </div>
           </div>
-          <div className="text-[35px] text-shadow-white">
+          <div className="text-[35px]">
             <span ref={el}></span>
           </div>
           <div>
