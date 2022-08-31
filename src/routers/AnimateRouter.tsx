@@ -9,7 +9,7 @@ export const AnimateRouter: FC<Props> = ({ children }) => {
   return (
     <Location>
       {({ location }) => (
-        <div className="lg:fixed absolute ">
+        <div>
             <Router key={location.key} location={location}>
               {children}
             </Router>
