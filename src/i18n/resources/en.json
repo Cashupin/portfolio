@@ -3,12 +3,13 @@
     
   },
   "typed": {
-    "dev": "Developer",
-    "design": "Design"
+    "dev": "Fullstack Developer",
+    "frontend": "Front-end Developer",
+    "backend": "Back-end Developer"
   },
   "menu": {
     "home": "Home",
-    "stack": "Stack",
+    "stack": "About me",
     "projects": "Projects"
   },
   "homebuttons": {
