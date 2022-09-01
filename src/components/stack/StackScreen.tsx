@@ -1,6 +1,8 @@
 import { RouteComponentProps } from '@gatsbyjs/reach-router'
 import { motion } from 'framer-motion'
 import React from 'react'
+import { ExperienceSection } from './components/ExperienceSection'
+import { SkillSection } from './components/SkillSection'
 
 export const StackScreen: React.FC<RouteComponentProps> = () => {
   return (
@@ -13,15 +15,8 @@ export const StackScreen: React.FC<RouteComponentProps> = () => {
         opacity: { duration: 1 }
       }}
     >
-      <div className="grid grid-cols-1 lg:grid-cols-2 text-center w-full lg:mt-36 content-center">
-        <div className="w-full grid grid-rows-3 p-20 text-white">
-          <div>
-            <div className="text-[4em] font-bold text-shadow-white leading-[0.90]">
-              <span className="inline-block align-baseline">Habilidades</span>
-            </div>
-          </div>
-        </div>
-      </div>
+      <SkillSection />
+      <ExperienceSection/>
     </motion.div>
   )
 }

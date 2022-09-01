@@ -15,5 +15,9 @@
   "homebuttons": {
     "cv": "Descargar CV",
     "contact": "Contactar"
+  },
+  "stack": {
+    "skill": "Habilidades",
+    "experience": "Experiencia"
   }
 }

@@ -1,6 +1,6 @@
 {
   "common": {
-    
+    "dev": "Developer"
   },
   "typed": {
     "dev": "Fullstack Developer",
@@ -15,5 +15,9 @@
   "homebuttons": {
     "cv": "Download CV",
     "contact": "Contact"
+  },
+  "stack": {
+    "skill": "Stack",
+    "experience": "Experience" 
   }
 }
